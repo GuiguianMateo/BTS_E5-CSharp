@@ -22,7 +22,7 @@ namespace AppLourdAVS.Wpf
 
         #endregion 
 
-        public void Login()
+       /* public void Login()
         {
             User user = null;
             using (AppLourdAVSContext context = new AppLourdAVSContext())
@@ -56,6 +56,6 @@ namespace AppLourdAVS.Wpf
                     MessageBox.Show("Nom d'utilisateur introuvable", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
+        }*/
     }
 }

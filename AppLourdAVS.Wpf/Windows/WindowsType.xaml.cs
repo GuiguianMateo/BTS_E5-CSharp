@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppLourdAVS.Wpf.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,20 +16,14 @@ using System.Windows.Shapes;
 namespace AppLourdAVS.Wpf.Windows
 {
     /// <summary>
-    /// Logique d'interaction pour WindowsLogin.xaml
+    /// Logique d'interaction pour WindowsType.xaml
     /// </summary>
-    public partial class WindowsLogin : Window
+    public partial class WindowsType : Window
     {
-        public WindowsLogin()
+        public WindowsType()
         {
             InitializeComponent();
-            this.DataContext = new ViewModelLogin();
+            DataContext = new ViewModelType();
         }
-
- /*       private void ButtonLogin_Click(object sender, RoutedEventArgs e)
-        {
-            ((ViewModelLogin)this.DataContext).Password = PasswordBoxLogin.Password;
-            ((ViewModelLogin)this.DataContext).Login();
-        }*/
     }
 }
