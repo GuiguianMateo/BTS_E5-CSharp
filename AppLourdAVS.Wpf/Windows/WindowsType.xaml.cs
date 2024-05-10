@@ -25,5 +25,17 @@ namespace AppLourdAVS.Wpf.Windows
             InitializeComponent();
             DataContext = new ViewModelType();
         }
+
+        private void Create_Type_Click(object sender, RoutedEventArgs e)
+        {
+            // Initialiser la vue FormCreateProduitView en transmettant le ViewModelProduit
+            WindowsCreateType formCreateProduitView = new WindowsCreateType((ViewModelType)this.DataContext);
+
+            // Afficher la vue
+
+            formCreateProduitView.ShowDialog();
+
+        }
+
     }
 }

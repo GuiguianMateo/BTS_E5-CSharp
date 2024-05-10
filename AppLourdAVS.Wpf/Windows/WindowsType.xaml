@@ -9,42 +9,42 @@
         <Grid>
             <Grid  ShowGridLines="false">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition Height="40"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="25"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="25"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
             <Button x:Name="ButtonType" Content="Type Consultation" Grid.Column="1" FontSize="14"></Button>
             <Button x:Name="ButtonUser" Content="Utilisateur" Grid.Column="3" FontSize="14"></Button>
             <Button x:Name="ButtonLogout" Content="Déconnexion" Grid.Column="5" FontSize="14"></Button>
         </Grid>
-            <Grid ShowGridLines="true">
+            <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
                 <RowDefinition Height="125"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="10"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonCreate" Content="Créer" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonCreate" Content="Créer"  Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
             <Button x:Name="ButtonEdit" Content="Modifier" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
             <Button x:Name="ButtonDelete" Content="Supprimer" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
         </Grid>
-            <Grid ShowGridLines="false">
+            <Grid ShowGridLines="true">
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
@@ -56,7 +56,7 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label x:Name="LabelCastingsTitle" Content="Castings :" Grid.Column="1" Grid.Row="1" FontSize="22" HorizontalAlignment="Center"></Label>
+            <Label x:Name="LabelCastingsTitle" Content="Castings :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
             <DataGrid
                                             x:Name="type"
                                             Grid.Column="1"
@@ -69,7 +69,7 @@
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Type de Consultation" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Durée du type" Binding="{Binding Duration}"/>
+                    <DataGridTextColumn Header="Durée du type (Jour)" Binding="{Binding Duration}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
