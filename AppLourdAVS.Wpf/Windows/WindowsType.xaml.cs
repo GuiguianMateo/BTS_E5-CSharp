@@ -32,9 +32,14 @@ namespace AppLourdAVS.Wpf.Windows
             WindowsCreateType formCreateProduitView = new WindowsCreateType((ViewModelType)this.DataContext);
 
             // Afficher la vue
-
             formCreateProduitView.ShowDialog();
+        }
 
+        private void Edit_Type_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsEditType formModif = new WindowsEditType(((ViewModelType)this.DataContext));
+
+            formModif.ShowDialog();
         }
 
     }

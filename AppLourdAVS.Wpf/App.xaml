@@ -1,10 +1,23 @@
 ﻿<Application x:Class="AppLourdAVS.Wpf.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:AppLourdAVS.Wpf"
+             xmlns:local="clr-namespace:AppLourdAVS.Wpf" 
+             xmlns:converters="clr-namespace:AppLourdAVS.Wpf.Converters"
              StartupUri="Windows/WindowsType.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />-->
+                <!-- Theme setting -->
+                <!--<ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Light.Blue.xaml" />-->
+                <!--<ResourceDictionary Source="./Styles/Styles.xaml"/>-->
+            </ResourceDictionary.MergedDictionaries>
+            <converters:BoolToVisibilityConverter x:Key="SharedBoolToVisibilityConverter"/>
+            <converters:ObjectToVisibilityConverter x:Key="SharedObjectToVisibilityConverter"/>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
     

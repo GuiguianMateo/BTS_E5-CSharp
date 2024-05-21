@@ -48,5 +48,18 @@ namespace AppLourdAVS.Wpf.ViewModels
                 this.SelectedType = this.NewType;
             }
         }
+
+        internal void EditType()
+        {
+            if (this.SelectedType is not null)
+            {
+                using (AvsContext context = new())
+                {
+                    context.Update(this.SelectedType);
+                    context.SaveChanges();
+                }
+
+            }
+        }
     }
 }

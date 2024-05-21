@@ -41,10 +41,10 @@
                 <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button x:Name="ButtonCreate" Content="Créer"  Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonEdit" Content="Modifier" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonEdit" Content="Modifier" Click="Edit_Type_Click" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
             <Button x:Name="ButtonDelete" Content="Supprimer" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
         </Grid>
-            <Grid ShowGridLines="true">
+            <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
                 <RowDefinition Height="75"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
@@ -56,7 +56,7 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label x:Name="LabelCastingsTitle" Content="Castings :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
+            <Label x:Name="LabelCastingsTitle" Content="Types Consultation :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
             <DataGrid
                                             x:Name="type"
                                             Grid.Column="1"

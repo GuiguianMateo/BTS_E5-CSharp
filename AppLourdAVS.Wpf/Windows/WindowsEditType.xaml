@@ -1,12 +1,11 @@
-﻿<Window x:Class="AppLourdAVS.Wpf.Windows.WindowsCreateType"
+﻿<Window x:Class="AppLourdAVS.Wpf.Windows.WindowsEditType"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:adorners="http://gu.se/Adorners"
         xmlns:local="clr-namespace:AppLourdAVS.Wpf.Windows"
         mc:Ignorable="d"
-        Title="WindowsCreateType" Height="450" Width="800">
+        Title="WindowsEditType" Height="450" Width="800">
     <Grid>
         <Grid ShowGridLines="false">
 
@@ -27,18 +26,18 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="1" Grid.Row="1" Content="Creation du Type" FontSize="24" HorizontalAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row="1" Content="Modification du Type" FontSize="24" HorizontalAlignment="Center"/>
 
             <Label Grid.Column="1" Grid.Row="3" Content="Nom du Type :" FontSize="14"/>
 
             <Label Grid.Column="1" Grid.Row="6" Content="Durée du Type :" FontSize="14"/>
 
 
-            <TextBox x:Name="TextBoxName" Grid.Column="1" Grid.Row="4" Text="{Binding NewType.Name}" VerticalAlignment="Center"/>
+            <TextBox x:Name="TextBoxName" Grid.Column="1" Grid.Row="4" Text="{Binding SelectedType.Name}" VerticalAlignment="Center"/>
 
-            <TextBox x:Name="TextBoxDuration" Grid.Column="1" Grid.Row="7" Text="{Binding NewType.Duration}" VerticalAlignment="Center"  PreviewTextInput="NumericTextBox"/>
+            <TextBox x:Name="TextBoxDuration" Grid.Column="1" Grid.Row="7" Text="{Binding SelectedType.Duration}" VerticalAlignment="Center"  PreviewTextInput="NumericTextBox"/>
         </Grid>
-        
+
         <Grid ShowGridLines="false">
 
             <Grid.RowDefinitions>
@@ -54,11 +53,10 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="annuler" Content="Annuler" Grid.Column="1" Grid.Row="1" Click="Annuler_Create_Click"/>
+            <Button x:Name="annuler" Content="Annuler" Grid.Column="1" Grid.Row="1" Click="Annuler_Edit_Click"/>
 
-            <Button x:Name="créer" Content="Créer" Grid.Column="3" Grid.Row="1" Click="Create_Type_Click"/>
+            <Button x:Name="modifier" Content="Modifier" Grid.Column="3" Grid.Row="1" Click="Edit_Type_Click"/>
 
         </Grid>
     </Grid>
 </Window>
-
