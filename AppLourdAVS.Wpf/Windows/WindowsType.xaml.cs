@@ -1,17 +1,6 @@
-﻿using AppLourdAVS.Wpf.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AppLourdAVS.DBLib.Class;
+using AppLourdAVS.Wpf.ViewModels;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace AppLourdAVS.Wpf.Windows
 {
@@ -38,9 +27,31 @@ namespace AppLourdAVS.Wpf.Windows
         private void Edit_Type_Click(object sender, RoutedEventArgs e)
         {
             WindowsEditType formModif = new WindowsEditType(((ViewModelType)this.DataContext));
-
             formModif.ShowDialog();
         }
 
+        private void Delete_Type_Click(object sender, RoutedEventArgs e)
+        {
+            if (((ViewModelType)this.DataContext).SelectedType != null)
+            {
+                using (AvsContext context = new AvsContext())
+                {
+
+                    if (context.Consultations.Any(c => c.TypeId == ((ViewModelType)this.DataContext).SelectedType.Id))
+                    {
+                        MessageBox.Show("Impossible de supprimer ce type car il est lié à une ou plusieurs consultations", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    else if (context.Praticiens.Any(p => p.TypeId == ((ViewModelType)this.DataContext).SelectedType.Id))
+                    {
+                        MessageBox.Show("Impossible de supprimer ce type car il est lié à un ou plusieurs praticiens.", "Avertissement", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    else
+                    {
+                        ((ViewModelType)this.DataContext).DeleteType();
+                    }
+                }
+            }
+        }
     }
 }
+    

@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppLourdAVS.Wpf.Windows"
         mc:Ignorable="d"
-        Title="WindowsType" Height="450" Width="800">
-        <Grid>
+        Title="WindowsType" Height="450" Width="800"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Grid>
             <Grid  ShowGridLines="false">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"></RowDefinition>
@@ -15,7 +16,7 @@
                 <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="25"></ColumnDefinition>
                 <ColumnDefinition Width="125"></ColumnDefinition>
-                <ColumnDefinition Width="25"></ColumnDefinition>
+                <ColumnDefinition Width="25"></ColumnDefinition>    
                 <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="125"></ColumnDefinition>
@@ -42,7 +43,7 @@
             </Grid.ColumnDefinitions>
             <Button x:Name="ButtonCreate" Content="Créer"  Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
             <Button x:Name="ButtonEdit" Content="Modifier" Click="Edit_Type_Click" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonDelete" Content="Supprimer" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonDelete" Content="Supprimer" Click="Delete_Type_Click" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
         </Grid>
             <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
