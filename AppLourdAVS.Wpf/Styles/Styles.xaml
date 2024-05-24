@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!-- Style pour TabControl -->
+
+    <!-- Style pour TabItem -->
+    <Style TargetType="TabItem">
+        <Setter Property="Padding" Value="10,5"/>
+        <Setter Property="Background" Value="LightGray"/>
+    </Style>
+
+    <Style x:Key="Style Create" TargetType="Button">
+        <Setter Property="Background" Value="SkyBlue"/>
+    </Style>
+    
+    <Style x:Key="Style Edit" TargetType="Button">
+        <Setter Property="Background" Value="DarkGoldenrod"/>
+    </Style>
+    
+    <Style x:Key="Style Delete" TargetType="Button">
+        <Setter Property="Background" Value="IndianRed"/>
+    </Style>
+</ResourceDictionary>

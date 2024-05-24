@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace AppLourdAVS
+namespace AppLourdAVS.Wpf
 {
     /// <summary>
     /// Interaction logic for App.xaml

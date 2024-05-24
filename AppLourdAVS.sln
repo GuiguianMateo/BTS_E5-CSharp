@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLourdAVS.Wpf", "AppLourdAVS\AppLourdAVS.Wpf.csproj", "{A774868A-5A26-4074-B035-8F02D1371BCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLourdAVS.DBLib", "AppLourdAVS.DBLib\AppLourdAVS.DBLib.csproj", "{FC31B678-2C08-45BA-AEDA-4BFE03D68C36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLourdAVS.DBLib", "AppLourdAVS.DBLib\AppLourdAVS.DBLib.csproj", "{FC31B678-2C08-45BA-AEDA-4BFE03D68C36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppLourdAVS.Core", "AppLourdAVS.Core\AppLourdAVS.Core.csproj", "{135FA0F5-457E-4A9C-9D22-76AC55803BF2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLourdAVS.Core", "AppLourdAVS.Core\AppLourdAVS.Core.csproj", "{135FA0F5-457E-4A9C-9D22-76AC55803BF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLourdAVS.Wpf", "AppLourdAVS.Wpf\AppLourdAVS.Wpf.csproj", "{217A0AB7-0A3B-4CA2-9416-53ABD80856DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A774868A-5A26-4074-B035-8F02D1371BCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A774868A-5A26-4074-B035-8F02D1371BCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A774868A-5A26-4074-B035-8F02D1371BCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A774868A-5A26-4074-B035-8F02D1371BCC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FC31B678-2C08-45BA-AEDA-4BFE03D68C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FC31B678-2C08-45BA-AEDA-4BFE03D68C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC31B678-2C08-45BA-AEDA-4BFE03D68C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{135FA0F5-457E-4A9C-9D22-76AC55803BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{135FA0F5-457E-4A9C-9D22-76AC55803BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{135FA0F5-457E-4A9C-9D22-76AC55803BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217A0AB7-0A3B-4CA2-9416-53ABD80856DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217A0AB7-0A3B-4CA2-9416-53ABD80856DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217A0AB7-0A3B-4CA2-9416-53ABD80856DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217A0AB7-0A3B-4CA2-9416-53ABD80856DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
