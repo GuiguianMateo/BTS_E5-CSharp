@@ -1,11 +1,10 @@
-﻿<Window x:Class="AppLourdAVS.Wpf.Windows.WindowsLogin"
+﻿<UserControl x:Class="AppLourdAVS.Wpf.Windows.WindowsLogin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppLourdAVS.Wpf.Windows"
-        mc:Ignorable="d"
-        Title="Page de Connexion" Height="450" Width="800">
+        mc:Ignorable="d">
     <Grid ShowGridLines="false">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -35,4 +34,4 @@
 
         <!--<Button x:Name="ButtonLogin" Click="ButtonLogin_Click" Content="Connexion" TextBlock.FontSize="18" Background="SkyBlue" Grid.Column="1" Grid.Row="9"></Button>-->
     </Grid>
-</Window>
+</UserControl>

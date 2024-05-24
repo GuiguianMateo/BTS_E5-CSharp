@@ -20,7 +20,7 @@ namespace AppLourdAVS.Wpf.Windows
         private void Edit_Type_Click(object sender, RoutedEventArgs e)
         {
             if (((ViewModelType)this.DataContext).SelectedType != null)
-            {
+            { 
                 ((ViewModelType)this.DataContext).EditType();
                 this.Close();
             }

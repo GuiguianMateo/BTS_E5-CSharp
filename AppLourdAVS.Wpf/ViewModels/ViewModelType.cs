@@ -30,12 +30,11 @@ namespace AppLourdAVS.Wpf.ViewModels
         {
             if (this.SelectedType != null)
             {
-                // Cloner l'objet SelectedType pour sauvegarder l'état initial
+                // Sauvegarder les données SelectedType
                 _originalSelectedType = new DBLib.Class.Type
                 {
-                    Id = this.SelectedType.Id,
-                    Name = this.SelectedType.Name
-                    // Ajoutez d'autres propriétés ici si nécessaire
+                    Name = this.SelectedType.Name,
+                    Duration = this.SelectedType.Duration
                 };
             }
         }
@@ -44,10 +43,9 @@ namespace AppLourdAVS.Wpf.ViewModels
         {
             if (this.SelectedType != null && _originalSelectedType != null)
             {
-                // Restaurer les propriétés de l'objet SelectedType à partir de _originalSelectedType
-                this.SelectedType.Id = _originalSelectedType.Id;
+                // Restaurer les propriétés
                 this.SelectedType.Name = _originalSelectedType.Name;
-                // Ajoutez d'autres propriétés ici si nécessaire
+                this.SelectedType.Duration = _originalSelectedType.Duration;
             }
         }
 

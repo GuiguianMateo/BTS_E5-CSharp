@@ -17,7 +17,7 @@ namespace AppLourdAVS.Wpf.Windows
     /// <summary>
     /// Logique d'interaction pour WindowsLogin.xaml
     /// </summary>
-    public partial class WindowsLogin : Window
+    public partial class WindowsLogin : UserControl
     {
         public WindowsLogin()
         {

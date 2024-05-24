@@ -1,13 +1,14 @@
 ﻿using AppLourdAVS.DBLib.Class;
 using AppLourdAVS.Wpf.ViewModels;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace AppLourdAVS.Wpf.Windows
 {
     /// <summary>
     /// Logique d'interaction pour WindowsType.xaml
     /// </summary>
-    public partial class WindowsType : Window
+    public partial class WindowsType : UserControl
     {
         public WindowsType()
         {

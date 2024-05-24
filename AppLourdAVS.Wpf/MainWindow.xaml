@@ -7,8 +7,17 @@
         xmlns:views="clr-namespace:AppLourdAVS.Wpf.Windows"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid x:Name="CastingView">
-        <views:WindowsType/>
-        <views:WindowsLogin/>
+    <Grid x:Name="TypeView">
+        <!--<views:WindowsLogin/>-->
+        <Grid>
+            <TabControl>
+                <TabItem Header="Types de Consultation">
+                    <views:WindowsType/>
+                </TabItem>
+                <TabItem Header="Utilisateurs">
+                    <views:WindowsUser/>
+                </TabItem>
+            </TabControl>
+        </Grid>
     </Grid>
 </Window>
