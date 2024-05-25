@@ -32,6 +32,6 @@
         <Label x:Name="LabelLoginPassword" Content="Mot de Passe :" Grid.Column="1" Grid.Row="6" TextBlock.TextAlignment="Center" TextBlock.FontSize="14"/>
         <PasswordBox x:Name="PasswordBoxLogin" BorderBrush="Black" TextBlock.FontSize="18" Grid.Column="1" Grid.Row="7"></PasswordBox>
 
-        <!--<Button x:Name="ButtonLogin" Click="ButtonLogin_Click" Content="Connexion" TextBlock.FontSize="18" Background="SkyBlue" Grid.Column="1" Grid.Row="9"></Button>-->
+        <Button x:Name="ButtonLogin" Click="ButtonLogin_Click" Content="Connexion" TextBlock.FontSize="18" Grid.Column="1" Grid.Row="9"></Button>
     </Grid>
 </UserControl>

@@ -42,18 +42,12 @@
             <TextBox x:Name="TextBoxFirstname" Grid.Column="3" Grid.Row="2" Text="{Binding SelectedUser.Firstname}" VerticalAlignment="Center"/>
 
             <StackPanel x:Name="StackPanelGender" Grid.Column="1" Grid.Row="5" Orientation="Horizontal">
-                <RadioButton Content="Masculin" GroupName="Gender" Margin="10,0"
-                         IsChecked="{Binding SelectedGender, Converter={StaticResource GenderToBoolConverter}, ConverterParameter=Masculin}"
-                         VerticalAlignment="Center"/>
-                <RadioButton Content="Féminin" GroupName="Gender" Margin="10,0"
-                         IsChecked="{Binding SelectedGender, Converter={StaticResource GenderToBoolConverter}, ConverterParameter=Féminin}"
-                         VerticalAlignment="Center"/>
-                <RadioButton Content="Autre" GroupName="Gender" Margin="10,0"
-                         IsChecked="{Binding SelectedGender, Converter={StaticResource GenderToBoolConverter}, ConverterParameter=Autre}"
-                         VerticalAlignment="Center"/>
+                <RadioButton Content="Masculin" GroupName="Gender" Margin="10,0" IsChecked="{Binding SelectedUser.Gender, Converter={StaticResource GenderToBoolConverter}, ConverterParameter=Masculin, Mode=TwoWay}" VerticalAlignment="Center"/>
+                <RadioButton Content="Féminin" GroupName="Gender" Margin="10,0" IsChecked="{Binding SelectedUser.Gender, Converter={StaticResource GenderToBoolConverter}, ConverterParameter=Féminin, Mode=TwoWay}" VerticalAlignment="Center"/>
+                <RadioButton Content="Autre" GroupName="Gender" Margin="10,0" IsChecked="{Binding SelectedUser.Gender, Converter={StaticResource GenderToBoolConverter}, ConverterParameter=Autre, Mode=TwoWay}" VerticalAlignment="Center"/>
             </StackPanel>
 
-            <DatePicker x:Name="DatePickerBirthday" Grid.Column="3" Grid.Row="5" Text="{Binding SelectedUser.Birthday}" VerticalAlignment="Center"/>
+            <DatePicker x:Name="DatePickerBirthday" Grid.Column="3" Grid.Row="5" Text="{Binding SelectedUser.Birthday, Mode=TwoWay}" VerticalAlignment="Center"/>
 
         </Grid>
 

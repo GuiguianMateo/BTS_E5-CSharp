@@ -50,7 +50,7 @@
                 x:Name="user"
                 Grid.Column="1"
                 Grid.Row="2" 
-                ItemsSource="{Binding FilteredUsers}"
+                ItemsSource="{Binding Users}"
 			            DisplayMemberPath="Libelle"
 			            SelectedItem="{Binding SelectedUser}"
                         AutoGenerateColumns="False"

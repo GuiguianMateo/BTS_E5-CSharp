@@ -25,10 +25,10 @@ namespace AppLourdAVS.Wpf.Windows
             this.DataContext = new ViewModelLogin();
         }
 
- /*       private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
         {
-            ((ViewModelLogin)this.DataContext).Password = PasswordBoxLogin.Password;
-            ((ViewModelLogin)this.DataContext).Login();
-        }*/
+/*            ((ViewModelLogin)this.DataContext).Password = PasswordBoxLogin.Password;
+            ((ViewModelLogin)this.DataContext).Login();*/
+        }
     }
 }

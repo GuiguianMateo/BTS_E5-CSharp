@@ -54,7 +54,7 @@ namespace AppLourdAVS.Wpf.ViewModels
             if (this.SelectedUser != null)
             {
                 // Sauvegarder les données SelectedUser
-                _originalSelectedUser = new DBLib.Class.User
+                _originalSelectedUser = new User
                 {
                     Name = this.SelectedUser.Name,
                     Firstname = this.SelectedUser.Firstname,
