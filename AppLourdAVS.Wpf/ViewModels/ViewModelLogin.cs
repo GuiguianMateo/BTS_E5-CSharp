@@ -1,9 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Forms;
 using AppLourdAVS.Wpf;
-using AppLourdAVS.DBLib;
 using Microsoft.VisualBasic.ApplicationServices;
 using MessageBox = System.Windows.Forms.MessageBox;
+using AppLourdAVS.DBLib.Class;
+using System.Windows.Input;
 
 namespace AppLourdAVS.Wpf
 {
@@ -11,46 +12,46 @@ namespace AppLourdAVS.Wpf
     {
         #region Fields
 
-        public string? Name { get; set; }
+        public string? Email { get; set; }
         public string? Password { get; set; }
-        public bool? Client { get; set; }
 
-        #endregion 
+        #endregion
 
-       /* public void Login()
+        public void Login()
         {
-            User user = null;
-            using (AppLourdAVSContext context = new AppLourdAVSContext())
+            if (string.IsNullOrWhiteSpace(Email) || string.IsNullOrWhiteSpace(Password))
             {
-                user = context.Users.FirstOrDefault(userTemp => userTemp.Name.Equals(Name) && userTemp.Client == 0); // Vérifier que l'utilisateur a le champ Client à 0
+                MessageBox.Show("Veuillez remplir tous les champs.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (AvsContext context = new AvsContext())
+            {
+                var user = context.Users.FirstOrDefault(u => u.Email.Equals(Email));
 
                 if (user != null)
                 {
-                    if (user.Client == 0)
+                    if (user.Client == false)
                     {
-                        // Vérifier le mot de passe haché avec BCrypt
                         if (BCrypt.Net.BCrypt.Verify(Password, user.Password))
                         {
-                            ((App)App.Current).Login(user);
+                            ((App)System.Windows.Application.Current).Login(user);
                         }
                         else
                         {
-                            // Mot de passe incorrect
                             MessageBox.Show("Mot de passe incorrect", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                     else
                     {
-                        // L'utilisateur n'a pas les autorisations nécessaires
                         MessageBox.Show("Vous n'avez pas les autorisations nécessaires pour accéder à cette application", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    // Nom d'utilisateur introuvable
-                    MessageBox.Show("Nom d'utilisateur introuvable", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Adresse mail introuvable", "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }*/
+        }
     }
 }

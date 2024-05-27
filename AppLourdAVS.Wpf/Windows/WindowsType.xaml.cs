@@ -53,6 +53,11 @@ namespace AppLourdAVS.Wpf.Windows
                 }
             }
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            ((App)App.Current).Logout();
+        }
     }
 }
     

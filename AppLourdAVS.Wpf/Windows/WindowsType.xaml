@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="115"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Logout" Content="Se Déconnecter" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="Logout" Content="Se Déconnecter" Click="Logout_Click" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
