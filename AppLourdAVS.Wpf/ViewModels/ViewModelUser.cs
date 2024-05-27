@@ -1,4 +1,5 @@
 ﻿using AppLourdAVS.DBLib.Class;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Data;

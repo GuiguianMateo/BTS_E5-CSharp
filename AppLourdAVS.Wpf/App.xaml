@@ -14,7 +14,6 @@
                 <ResourceDictionary Source="./Styles/Styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <converters:GenderToBoolConverter x:Key="GenderToBoolConverter"/>
-            <converters:BoolToVisibilityConverter x:Key="SharedBoolToVisibilityConverter"/>
             <converters:ObjectToVisibilityConverter x:Key="SharedObjectToVisibilityConverter"/>
 
         </ResourceDictionary>
