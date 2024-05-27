@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="115"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Logout" Content="Se Déconnecter" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="Logout" Content="Se Déconnecter" Click="Logout_Click" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
@@ -33,9 +33,9 @@
                 <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonCreate" Style="{StaticResource Style Create}" Content="Créer"  Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonEdit" Style="{StaticResource Style Edit}" Content="Modifier" Click="Edit_Type_Click" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonDelete" Style="{StaticResource Style Delete}" Content="Supprimer" Click="Delete_Type_Click" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonCreate" Style="{StaticResource StyleCreate}" Content="Créer"  Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonEdit" Style="{StaticResource StyleEdit}" Content="Modifier" Click="Edit_Type_Click" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonDelete" Style="{StaticResource StyleDelete}" Content="Supprimer" Click="Delete_Type_Click" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
@@ -49,14 +49,14 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label x:Name="LabelCastingsTitle" Content="Types Consultation :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
+            <Label Content="Types Consultation :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
             <DataGrid
                                 x:Name="type"
                                 Grid.Column="1"
                                 Grid.Row="2" 
                                 ItemsSource="{Binding Types}"
-					                                DisplayMemberPath="Libelle"
-					                                SelectedItem="{Binding SelectedType}"
+					                    DisplayMemberPath="Libelle"
+					                    SelectedItem="{Binding SelectedType}"
                                         AutoGenerateColumns="False"
                                         IsReadOnly="True">
 

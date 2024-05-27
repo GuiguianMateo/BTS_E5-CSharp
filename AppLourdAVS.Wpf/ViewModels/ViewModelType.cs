@@ -1,6 +1,5 @@
 ﻿using AppLourdAVS.DBLib.Class;
 using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace AppLourdAVS.Wpf.ViewModels
 {

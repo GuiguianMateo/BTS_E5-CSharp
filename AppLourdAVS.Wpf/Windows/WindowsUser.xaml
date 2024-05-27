@@ -15,45 +15,42 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="115"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Logout" Content="Se Déconnecter" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="Logout" Content="Se Déconnecter" Click="Logout_Click" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
-                <RowDefinition Height="100"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
-                <RowDefinition Height="10"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="50"></ColumnDefinition>
                 <ColumnDefinition Width="125"></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="350"></ColumnDefinition>
+                <ColumnDefinition Width="125"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonCreate" Content="Créer"  Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonEdit" Content="Modifier" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonDelete" Content="Supprimer" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonEdit" Content="Modifier" Style="{StaticResource StyleEdit}" Click="Edit_User_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonDelete" Content="Supprimer" Style="{StaticResource StyleDelete}" Click="Delete_User_Click" Grid.Row="1" Grid.Column="3" FontSize="14"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="75"></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"></ColumnDefinition>
+                <ColumnDefinition Width="10"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label x:Name="LabelCastingsTitle" Content="Liste des Utilisateurs :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
+            <Label Content="Liste des Utilisateurs :" Grid.Column="1" Grid.Row="1" FontSize="24" HorizontalAlignment="Center"></Label>
             <DataGrid
                 x:Name="user"
                 Grid.Column="1"
                 Grid.Row="2" 
-                ItemsSource="{Binding User}"
+                ItemsSource="{Binding Users}"
 			            DisplayMemberPath="Libelle"
 			            SelectedItem="{Binding SelectedUser}"
                         AutoGenerateColumns="False"
@@ -61,7 +58,11 @@
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nom de l'utilisateur" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="email de l'utilisateur" Binding="{Binding email}"/>
+                    <DataGridTextColumn Header="Prénom de l'utilisateur" Binding="{Binding Firstname}"/>
+                    <DataGridTextColumn Header="Genre" Binding="{Binding Gender}"/>
+                    <DataGridTextColumn Header="Date de naissance" Binding="{Binding Birthday}"/>
+                    <DataGridTextColumn Header="email de l'utilisateur" Binding="{Binding Email}"/>
+                    <DataGridTextColumn Header="Date de création" Binding="{Binding CreatedAt}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

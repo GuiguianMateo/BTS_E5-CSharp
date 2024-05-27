@@ -8,15 +8,30 @@
         <Setter Property="Background" Value="LightGray"/>
     </Style>
 
-    <Style x:Key="Style Create" TargetType="Button">
-        <Setter Property="Background" Value="SkyBlue"/>
+    <Style x:Key="StyleCreate" TargetType="Button">
+        <Setter Property="Background" Value="MediumSeaGreen"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="white"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
     
-    <Style x:Key="Style Edit" TargetType="Button">
+    <Style x:Key="StyleEdit" TargetType="Button">
         <Setter Property="Background" Value="DarkGoldenrod"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="white"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
-    
-    <Style x:Key="Style Delete" TargetType="Button">
+
+    <Style x:Key="StyleDelete" TargetType="Button">
         <Setter Property="Background" Value="IndianRed"/>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="White"/>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>
