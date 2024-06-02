@@ -4,8 +4,12 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppLourdAVS.Wpf.Windows"
-        xmlns:views="clr-namespace:AppLourdAVS.Wpf.Windows"
+        xmlns:views="clr-namespace:AppLourdAVS.Wpf.Windows" 
+        xmlns:converters="clr-namespace:AppLourdAVS.Wpf.Converters"
         mc:Ignorable="d">
+    <UserControl.Resources>
+        <converters:ObjectToVisibilityConverter x:Key="ObjectToVisibilityConverter"/>
+    </UserControl.Resources>
     <Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
@@ -16,7 +20,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="115"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Logout" Content="Se Déconnecter" Click="Logout_Click" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="Logout" Content="Se Déconnecter" Click="Logout_Click" Style="{StaticResource StyleLogout}" Grid.Row="0" Grid.Column="1" FontSize="14"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>
@@ -33,9 +37,11 @@
                 <ColumnDefinition Width="125"></ColumnDefinition>
                 <ColumnDefinition Width="150"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button x:Name="ButtonCreate" Style="{StaticResource StyleCreate}" Content="Créer"  Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonEdit" Style="{StaticResource StyleEdit}" Content="Modifier" Click="Edit_Type_Click" Grid.Row="3" Grid.Column="1" FontSize="14"></Button>
-            <Button x:Name="ButtonDelete" Style="{StaticResource StyleDelete}" Content="Supprimer" Click="Delete_Type_Click" Grid.Row="5" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonCreate" Style="{StaticResource StyleCreate}" Content="Créer" Click="Create_Type_Click" Grid.Row="1" Grid.Column="1" FontSize="14"></Button>
+            <Button x:Name="ButtonEdit" Style="{StaticResource StyleEdit}" Content="Modifier" Click="Edit_Type_Click" Grid.Row="3" Grid.Column="1" FontSize="14"
+                    Visibility="{Binding SelectedType, Converter={StaticResource ObjectToVisibilityConverter}}"></Button>
+            <Button x:Name="ButtonDelete" Style="{StaticResource StyleDelete}" Content="Supprimer" Click="Delete_Type_Click" Grid.Row="5" Grid.Column="1" FontSize="14"
+                    Visibility="{Binding SelectedType, Converter={StaticResource ObjectToVisibilityConverter}}"></Button>
         </Grid>
         <Grid ShowGridLines="false">
             <Grid.RowDefinitions>

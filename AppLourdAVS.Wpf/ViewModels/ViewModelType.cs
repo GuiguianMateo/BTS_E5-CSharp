@@ -1,5 +1,7 @@
 ﻿using AppLourdAVS.DBLib.Class;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace AppLourdAVS.Wpf.ViewModels
 {
@@ -11,6 +13,8 @@ namespace AppLourdAVS.Wpf.ViewModels
 
         private DBLib.Class.Type? _originalSelectedType;
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public ViewModelType()
         {
             ResetNewType();
@@ -18,6 +22,11 @@ namespace AppLourdAVS.Wpf.ViewModels
             {
                 Types = new ObservableCollection<DBLib.Class.Type>(mg.Types.ToList());
             }
+        }
+
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         public void ResetNewType()
