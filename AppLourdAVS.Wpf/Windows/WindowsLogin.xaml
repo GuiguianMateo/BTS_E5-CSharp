@@ -45,7 +45,7 @@
                 <RowDefinition Height="75"/>
             </Grid.RowDefinitions>
 
-            <Button x:Name="ButtonLogin" Click="Button_Login_Click" Content="Connexion" TextBlock.FontSize="18" Grid.Column="1" Grid.Row="1"></Button>
+            <Button x:Name="ButtonLogin" Click="Button_Login_Click" Content="Connexion" Style="{StaticResource StyleCreate}" TextBlock.FontSize="18" Grid.Column="1" Grid.Row="1"></Button>
         </Grid>
     </Grid>
 </Window>
